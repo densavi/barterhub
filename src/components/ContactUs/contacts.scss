@@ -1,0 +1,91 @@
+.contacts {
+  margin-bottom: 100px;
+  margin-top: 100px;
+  @media (max-width: $mobile) {
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+  &__wrap {
+    max-width: 910px;
+    padding: 57px 170px;
+    @include gradient;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 24px;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    @media (max-width: $tablet) {
+      padding: 50px 87px;
+      overflow: hidden;
+    }
+    @media (max-width: $mobile) {
+      padding: 40px 20px;
+    }
+  }
+
+  &__title {
+    font-size: 46px;
+    line-height: 1.1;
+    margin: 0 auto 16px;
+    @media (max-width: $mobile) {
+      font-size: 26px;
+    }
+  }
+
+  &__description {
+    max-width: 455px;
+    margin: 0 auto 32px;
+    @media (max-width: $mobile) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__btns-group {
+    margin-bottom: 20px;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      max-width: 420px;
+      margin: 0 auto 16px;
+    }
+  }
+
+  &__text {
+    color: rgba(#fff,.65);
+    font-weight: 600;
+    margin: 0;
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: color .5s ease;
+      &:hover {
+        color: rgba(#fff,.65);
+      }
+    }
+  }
+  &__icon {
+    position: absolute;
+    z-index: -1;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+    &-1 {
+      top: 90px;
+      left: 15px;
+      @media (max-width: $tablet) {
+        left: -20px;
+      }
+    }
+    &-2 {
+      bottom: 97px;
+      right: 28px;
+      @media (max-width: $tablet) {
+        right: -5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease;
+  padding: 65px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  overflow: auto;
+  @media (max-width: $tablet) {
+    padding-top: 100px;
+  }
+  @media (max-width: $mobile) {
+    padding-top: 85px;
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__nav {
+    flex: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      text-align: center;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: $black;
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__foot {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+    @media (max-width: $mobile) {
+      display: block;
+      max-width: 420px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__btns-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  &__langs {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    .current {
+      color: $blue-dark;
+    }
+    a {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+}
