@@ -2,3 +2,10 @@
   background: rgb(94,143,237);
   background: linear-gradient(184deg, rgba(94,143,237,1) 0%, rgba(47,111,232,1) 100%);
 }
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}

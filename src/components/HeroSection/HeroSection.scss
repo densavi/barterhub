@@ -1,3 +1,136 @@
 .hero {
   padding-bottom: 112px;
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    align-items: center;
+  }
+
+  &__exchange {
+    background: #fff;
+    padding: 28px;
+    border: 1px solid #DEE5ED;
+    border-radius: 24px;
+  }
+
+  &__give,
+  &__receive {
+    border: 1px solid #D6DEEB;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  &__give {
+    margin-bottom: 12px;
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #4D585F;
+    p {
+      margin: 0;
+      color: #8B9297;
+      span {
+        color: $black;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    input {
+      flex: 1;
+      height: 44px;
+      outline: none;
+      font-size: 36px;
+      color: $black;
+      font-family: 'Roboto', sans-serif;
+      border: 0;
+      @include placeholder {
+        color: $black;
+        font-family: 'Roboto', sans-serif;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    gap: 10px;
+    padding: 6px 8px 6px 6px;
+    background: #F6F8FA;
+    border-radius: 50px;
+    border: 0;
+    transition: background .5s ease;
+    cursor: pointer;
+    &:hover {
+      background: #D6DEEB;
+    }
+    img,svg {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      object-fit: contain;
+    }
+    p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: left;
+      span {
+        display: block;
+        margin-top: 4px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #6B6B6B;
+      }
+    }
+    &--arrow {
+      width: 16px !important;
+      height: 16px !important;
+      min-width: 16px !important;
+      object-fit: contain;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__swap {
+    width: 48px;
+    height: 48px;
+    background: #fff;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -24px;
+    margin-left: -24px;
+
+    button {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      cursor: pointer;
+      border: 0;
+      transition: transform .5s ease;
+      display: flex;
+      background: transparent;
+      &:hover {
+        transform: rotate(-180deg);
+      }
+    }
+
+  }
 }
