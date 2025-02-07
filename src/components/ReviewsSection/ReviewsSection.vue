@@ -11,6 +11,7 @@ export default {
   name: "ReviewsSection",
   data() {
     return {
+      avatar: require('@/assets/images/avatar.svg'),
       platforms: [
         {
           logo: bestChangeLogo,
@@ -37,6 +38,56 @@ export default {
           domain: 'kurs.expert',
           link: '#',
         },
+      ],
+      reviews: [
+        {
+          name: 'Kristin Watson',
+          date: '12.10.2025',
+          review: 'Быстрый и удобный сервис, обмен занимает всего несколько минут!',
+          platform: bestChangeLogo,
+        },
+        {
+          name: 'Kristin Watson',
+          date: '12.10.2025',
+          review: 'Быстрый и удобный сервис, обмен занимает всего несколько минут!',
+          platform: bestChangeLogo,
+        },
+        {
+          name: 'Kristin Watson',
+          date: '12.10.2025',
+          review: 'Быстрый и удобный сервис, обмен занимает всего несколько минут!',
+          platform: bestChangeLogo,
+        },
+        {
+          name: 'Kristin Watson',
+          date: '12.10.2025',
+          review: 'Быстрый и удобный сервис, обмен занимает всего несколько минут!',
+          platform: bestChangeLogo,
+        },
+        {
+          name: 'Kristin Watson',
+          date: '12.10.2025',
+          review: 'Быстрый и удобный сервис, обмен занимает всего несколько минут!',
+          platform: bestChangeLogo,
+        },
+        {
+          name: 'Kristin Watson',
+          date: '12.10.2025',
+          review: 'Быстрый и удобный сервис, обмен занимает всего несколько минут!',
+          platform: bestChangeLogo,
+        },
+        {
+          name: 'Kristin Watson',
+          date: '12.10.2025',
+          review: 'Быстрый и удобный сервис, обмен занимает всего несколько минут!',
+          platform: bestChangeLogo,
+        },
+        {
+          name: 'Kristin Watson',
+          date: '12.10.2025',
+          review: 'Быстрый и удобный сервис, обмен занимает всего несколько минут!',
+          platform: bestChangeLogo,
+        },
       ]
     }
   }
@@ -59,6 +110,24 @@ export default {
       <div v-for="platform in platforms" :key="platform.domain" class="reviews__platform">
         <img class="reviews__logo" :src="platform.logo" alt="">
         <a class="reviews__link" :href="platform.link">{{ platform.domain }}</a>
+      </div>
+    </div>
+
+    <div class="reviews__wrap">
+      <div v-for="review in reviews" :key="review.name" class="reviews__item">
+        <div class="reviews__head">
+          <div class="reviews__name">
+            <img class="reviews__photo" :src="avatar" alt="">
+            <div style="display: flex; flex-direction: column">
+              <h4>{{ review.name }}</h4>
+              <span>{{ review.date }}</span>
+            </div>
+          </div>
+          <div class="reviews__text">{{ review.review }}</div>
+        </div>
+        <div v-if="review.platform" class="reviews__from">
+          <img :src="review.platform" alt="">
+        </div>
       </div>
     </div>
 

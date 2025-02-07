@@ -1,5 +1,10 @@
 .reviews {
   padding-bottom: 108px;
+  background: url('@/assets/images/reviews.png') center bottom / cover no-repeat;
+  @media (max-width: $mobile) {
+    padding-bottom: 60px;
+  }
+
   &__title {
     text-align: center;
     margin: 0 0 16px;
@@ -9,6 +14,7 @@
       font-size: 34px;
     }
   }
+
   &__descr {
     max-width: 455px;
     margin: 0 auto 52px;
@@ -20,7 +26,7 @@
   }
 
   &__heading {
-    margin:  0 0 24px;
+    margin: 0 0 24px;
     font-size: 16px;
     text-align: center;
   }
@@ -44,6 +50,7 @@
     width: 162px;
     position: relative;
     text-align: center;
+
     &:not(:last-child) {
       &:before {
         content: '';
@@ -74,6 +81,7 @@
     font-weight: 600;
     color: #3372E8;
     text-decoration: underline;
+
     &:hover {
       text-decoration: none;
     }
@@ -82,5 +90,66 @@
   &__btn {
     display: flex;
     justify-content: center;
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 52px;
+    @media (max-width: $mobile) {
+      margin-bottom: 25px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    min-height: 188px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid #DEE5ED;
+    padding: 20px 24px;
+    gap: 12px;
+
+  }
+  &__head {
+    flex: 1;
+  }
+
+  &__from {
+    display: flex;
+    max-width: 100px;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    h4 {
+      margin: 0 0 5px;
+      line-height: 1;
+      font-size: 14px;
+      font-weight: 600;
+      color: #050B14;
+    }
+    span {
+      font-size: 12px;
+      line-height: 1;
+    }
+  }
+
+  &__photo {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    object-fit: cover;
+  }
+
+  &__text {
+    font-weight: 500;
   }
 }
