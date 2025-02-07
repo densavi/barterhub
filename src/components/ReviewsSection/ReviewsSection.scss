@@ -1,3 +1,86 @@
 .reviews {
   padding-bottom: 108px;
+  &__title {
+    text-align: center;
+    margin: 0 0 16px;
+    font-size: 46px;
+    line-height: 1;
+    @media (max-width: $mobile) {
+      font-size: 34px;
+    }
+  }
+  &__descr {
+    max-width: 455px;
+    margin: 0 auto 52px;
+    text-align: center;
+    color: #4D585F;
+    @media (max-width: $mobile) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__heading {
+    margin:  0 0 24px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__platforms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+    @media (max-width: $tablet) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: $mobile) {
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__platform {
+    width: 162px;
+    position: relative;
+    text-align: center;
+    &:not(:last-child) {
+      &:before {
+        content: '';
+        position: absolute;
+        left: calc(100% + 25px);
+        width: 1px;
+        height: 36px;
+        background: #D6DEEB;
+        top: 50%;
+        transform: translateY(-50%);
+        @media (max-width: $tablet) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    display: flex;
+    height: 52px;
+    object-fit: contain;
+    margin-bottom: 4px;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3372E8;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+  }
 }

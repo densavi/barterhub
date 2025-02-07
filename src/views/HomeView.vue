@@ -6,7 +6,11 @@
         :menu="menu"
         :langs="langs"
     />
-    <HeroSection :currencies="currencies" />
+    <HeroSection
+        :currencies="currencies"
+        @update:currencies="currencies = $event"
+    />
+    <img class="first-screen-image" src="@/assets/images/header-bg.png" alt="">
   </div>
   <ReviewsSection />
   <FaqSection />
@@ -29,7 +33,6 @@ import FaqSection from "@/components/FaqSection/FaqSection.vue";
 import ContactUs from "@/components/ContactUs/ContactUs.vue";
 import Footer from '@/components/Footer/SiteFooter.vue';
 import MobileMenu from "@/components/MobileMenu/MobileMenu.vue";
-
 
 import usdttrc20Icon from '@/assets/images/usdtrtc20.svg';
 import ethIcon from '@/assets/images/eth.svg';
@@ -126,7 +129,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.header-bg {
-  background: url('@/assets/images/header-bg.png') top right / cover no-repeat;
+.first-screen-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  max-height: inherit;
+  z-index: -1;
 }
 </style>
